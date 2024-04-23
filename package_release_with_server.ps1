@@ -72,7 +72,10 @@ Set-Location ./project
 
 $jsonFilePath = "./assets/configs/http.json"
 $jsonContent = Get-Content -Path $jsonFilePath -Raw
-Write-Output "Get-Content $jsonContent" >> "$env:GITHUB_OUTPUT"
+£modifiedJson = $jsonContent -replace '"ip": "127.0.0.1"','"ip": "0.0.0.0"'
+Set-Content - Path jsonFilePath -Value $modifiedJson
+#PS> $string -replace '(?<First_Part>.*), (?<Second_Part>.*)','${Second_Part},${First_Part}'
+
 #(Get-Content $jsonFilePath).Replace('"ip": "127.0.0.1"','"ip": "0.0.0.0"') | Set-Content $jsonFilePath
 
 
