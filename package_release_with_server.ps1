@@ -67,11 +67,16 @@ Write-Output "lfs"
 git lfs fetch
 git lfs pull
 
-$jsonFilePath = "./project/assets/configs/http.json"
-(Get-Content $jsonFilePath).Replace('127.0.0.1','0.0.0.0') | Set-Content $jsonFilePath
-
 Write-Output "build"
 Set-Location ./project
+
+$jsonFilePath = "./assets/configs/http.json"
+$getContent = (Get-Content $jsonFilePath)
+Write-Output $getContent
+(Get-Content $jsonFilePath).Replace('127.0.0.1','0.0.0.0') | Set-Content $jsonFilePath
+$getContentAfter = (Get-Content $jsonFilePath)
+Write-Output $getContentAfter
+
 
 if ($IsWindows) {
     npm install
