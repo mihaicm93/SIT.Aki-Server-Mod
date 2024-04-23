@@ -71,11 +71,9 @@ Write-Output "build"
 Set-Location ./project
 
 $jsonFilePath = "./assets/configs/http.json"
-$getContent = (Get-Content $jsonFilePath)
-Write-Output $getContent
-(Get-Content $jsonFilePath).Replace('127.0.0.1','0.0.0.0') | Set-Content $jsonFilePath
-$getContentAfter = (Get-Content $jsonFilePath)
-Write-Output $getContentAfter
+$jsonContent = Get-Content -Path $jsonFilePath -Raw
+Write-Output "Get-Content $jsonContent" >> "$env:GITHUB_OUTPUT"
+#(Get-Content $jsonFilePath).Replace('"ip": "127.0.0.1"','"ip": "0.0.0.0"') | Set-Content $jsonFilePath
 
 
 if ($IsWindows) {
@@ -118,3 +116,5 @@ if ($IsWindows) {
 Write-Output "ZIP_NAME=$ZipName" | Out-File -Append -FilePath $Env:GITHUB_ENV
 Write-Output "AKI_VERSION=$akiVer" | Out-File -Append -FilePath $Env:GITHUB_ENV
 Write-Output "COMMIT_SHORT=$CommitShort" | Out-File -Append -FilePath $Env:GITHUB_ENV
+Write-Output "Get-Content=$jsonContent" | Out-File -Append -FilePath $Env:GITHUB_ENV
+
