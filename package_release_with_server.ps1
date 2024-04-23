@@ -59,11 +59,6 @@ if ($Commit.Length -gt 0) {
     $Commit = git rev-parse HEAD
 }
 
-$jsonFilePath = "./project/assets/configs/http.json"
-(Get-Content $jsonFilePath).Replace('127.0.0.1','0.0.0.0') | Set-Content $jsonFilePath
-# (Get-Content c:\temp\test.txt).Replace('[MYID]', 'MyValue') | Set-Content c:\temp\test.txt
-
-
 $packageJsonPath = "./project/package.json"
 $akiVer = (Get-Content $packageJsonPath -Raw | ConvertFrom-Json).version
 Write-Output "AKI_VERSION=$akiVer" >> "$env:GITHUB_OUTPUT"
@@ -71,6 +66,9 @@ Write-Output "AKI_VERSION=$akiVer" >> "$env:GITHUB_OUTPUT"
 Write-Output "lfs"
 git lfs fetch
 git lfs pull
+
+$jsonFilePath = "./project/assets/configs/http.json"
+(Get-Content $jsonFilePath).Replace('127.0.0.1','0.0.0.0') | Set-Content $jsonFilePath
 
 Write-Output "build"
 Set-Location ./project
