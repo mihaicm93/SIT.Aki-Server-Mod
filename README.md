@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align=center style="text-align: center;">
 <h1> Stay in Tarkov </h1>
 A SPT-Aki mod to be used with SPT-Aki Server to allow the Coop Module to communicate with the SPT-Aki Server.
@@ -16,35 +18,6 @@ A SPT-Aki mod to be used with SPT-Aki Server to allow the Coop Module to communi
 ## Summary
 
 This is the SERVER modification of [SPT-Aki](https://www.sp-tarkov.com/) to allow the [Coop Module](https://github.com/stayintarkov/StayInTarkov.Client) to communicate with the SPT-Aki Server.
-
-<a name="readme-top"></a>
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/stayintarkov/StayInTarkov.Client">
-    <img src="Assets/sit-logo-5.png" alt="Logo" height="240">
-  </a>
-
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  <br/>
-  ![TotalDownloads][downloads-total-shield]
-  ![LatestDownloads][downloads-latest-shield]
-
-
-<h3 align="center">Stay In Tarkov Client</h3>
-
-  <p align="center">
-    An Escape From Tarkov BepInEx module designed to be used with the SIT.Aki-Server-Mod with the ultimate goal of "Offline" Coop
-    <br />
-    <a href="https://stayintarkov.com/docs"><strong>Explore the docs »</strong></a>
-  </p>
-
-  [English](README.md) **|** [简体中文](README_CN.md) **|** [Deutsch](README_DE.md) **|** [Português-Brasil](README_PO.md) **|** [日本語](README_JA.md) **|** [한국어-Korean](README_KO.md) **|** [Français](README_FR.md)
-</div>
-
 
 
 <!-- TABLE OF CONTENTS -->
