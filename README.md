@@ -102,7 +102,7 @@ Our Discord invite link can be found at https://stayintarkov.com/discord
 * [Dounai](https://github.com/dounai2333)
 * [SPT-Aki team](https://www.sp-tarkov.com/) (Credits provided on each code file used and much love to their Dev team for their support)
 * [DrakiaXYZ](https://github.com/DrakiaXYZ/)
-* [Contributors](https://github.com/stayintarkov/StayInTarkov.Client/graphs/contributors) and the original contributors of Paulov's SIT.Core
+* [Contributors](https://github.com/stayintarkov/SIT.Aki-Server-Mod/graphs/contributors) and the original contributors of Paulov's SIT.Core
 * [RevenantX LiteNetLib](https://github.com/RevenantX/LiteNetLib)
 
 
